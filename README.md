@@ -8,12 +8,11 @@
 
 
 ### **Setting up GIT**
-- Add SSH Key for github
+- Add SSH Key for github: [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 ```python
 git init .
 git add .
-git branch -M Master #May not need this line
 git remote add origin <SSH_GIT>
 git commit -m "Commit_MESSAGE"
-git push -u origin master
+git push -u origin Master
 ```
