@@ -1,0 +1,12 @@
+{
+    "Stop Detection Folder":"G:\\My Drive\\Fall 2023\\TIM 147\\TIM 147 Group 6 (Group Project)\\Training Data\\",
+    "Archived Folder":"C:\\Users\\garfi\\Downloads\\Archive", 
+    "Combined CSV File":"C:\\Users\\garfi\\Downloads\\TAPS Logged Data-20231107T191350Z-001\\Train_Clean.csv",
+    "Output CSV File":"./June_GTFS_Analysis.csv", 
+    "StopSequenceFile":"C:\\Users\\garfi\\Documents\\GitHub\\data-processing\\TestData\\run_time_segments.xlsx",
+    "LoggedTableColumns":["Date_Time", "stop_id", "stop_name", "stop_lat", "stop_lon", "geohash", "num_detected", "distance_to_stop", "lat", "lon"], 
+    "SimiliarStopids":"C:\\Users\\garfi\\Documents\\GitHub\\data-processing\\TestData\\group_ids.xlsx",
+    "RunTimePeriodFile":"../TestData/run_time_periods.xlsx",
+    "DaysColumn":["MWF","TuTh", "SaSu"],
+    "listofgroupstosearch":["2300_to_bayhi", "mrnlab_to_2300", "2300_to_mrnlab", "bayhi_to_2300", "oakes_to_bayhi", "oakes_to_wrm", "scihl_to_oakes","cowste_to_scihl", "erm_to_cowste", "bayhi_to_cowste", "cowste_to_bayhi", "cowste_to_erm", "scihl_to_cowste"]
+}
