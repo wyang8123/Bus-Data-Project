@@ -17,6 +17,9 @@ It is important to have schedules that represent the data from the bus. We will 
 
 ### **Project References**
 - [kaggle forcasting bus demand](https://www.kaggle.com/code/serdargundogdu/forecasting-bus-demand-with-time-series)
+- [kaggle predicting bus delay](https://www.kaggle.com/code/asit78/predicting-the-bus-delays-on-any-given-day/notebook)
+- [kaggle NYC Bus Traffic Analysis](https://www.kaggle.com/code/sachinxshrivastav/nyc-bus-traffic-analysis/notebook)
+
 
 ### **Group Resources Internal**
 - [Training Raw Folder](https://drive.google.com/drive/folders/1pOEjtb1TFz1i7-1fmpwMigLnDeLY_Qp8?usp=drive_link)
