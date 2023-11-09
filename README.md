@@ -18,7 +18,9 @@ It is important to have schedules that represent the data from the bus. We will 
 ### **Project References**
 - [kaggle forcasting bus demand](https://www.kaggle.com/code/serdargundogdu/forecasting-bus-demand-with-time-series)
 
-### **Group Resources**
+### **Group Resources Internal**
+- [Training Raw Folder](https://drive.google.com/drive/folders/1pOEjtb1TFz1i7-1fmpwMigLnDeLY_Qp8?usp=drive_link)
+- [Testing Raw Folder](https://drive.google.com/drive/folders/1pSLZrU5neqJUVNWVVT3CGrxBIBYI47Wp?usp=drive_link)
 - [Testing Dataset](https://drive.google.com/file/d/1tELkS1DEUddnpKkguctOj6t8LvgJYDIz/view?usp=drive_link)
 - [Training Dataset](https://drive.google.com/file/d/1uVq3dwf4CKwLd5U0Y8uMOjxkjjXmXfvO/view?usp=drive_link)
 
