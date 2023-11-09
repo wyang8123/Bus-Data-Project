@@ -1,8 +1,8 @@
 {
-    "Stop Detection Folder":"G:\\My Drive\\Fall 2023\\TIM 147\\TIM 147 Group 6 (Group Project)\\Training Data\\",
+    "Stop Detection Folder":"G:\\My Drive\\Fall 2023\\TIM 147\\TIM 147 Group 6 (Group Project)\\Testing Data\\",
     "Archived Folder":"C:\\Users\\garfi\\Downloads\\Archive", 
-    "Combined CSV File":"C:\\Users\\garfi\\Downloads\\TAPS Logged Data-20231107T191350Z-001\\Train_Clean.csv",
-    "Output CSV File":"./June_GTFS_Analysis.csv", 
+    "Combined CSV File":"C:\\Users\\garfi\\Downloads\\TAPS Logged Data-20231107T191350Z-001\\Test_Clean.csv",
+    "Output CSV File":"C:\\Users\\garfi\\Downloads\\TAPS Logged Data-20231107T191350Z-001\\Test_Readable.csv", 
     "StopSequenceFile":"C:\\Users\\garfi\\Documents\\GitHub\\data-processing\\TestData\\run_time_segments.xlsx",
     "LoggedTableColumns":["Date_Time", "stop_id", "stop_name", "stop_lat", "stop_lon", "geohash", "num_detected", "distance_to_stop", "lat", "lon"], 
     "SimiliarStopids":"C:\\Users\\garfi\\Documents\\GitHub\\data-processing\\TestData\\group_ids.xlsx",

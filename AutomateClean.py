@@ -1,9 +1,9 @@
 import sys, os, shutil
 from StopSequnceGenerator import *
 #from AIDataAnalysis import *
+from RemoveoutlierTrips import *
 from CombinedData import *
 from CleanData import *
-#from CleaningAggregation import *
 
 import json, multiprocessing
 
@@ -75,7 +75,7 @@ def main(Folderbustop, ArchivedFolder, CombinedOutputCSVFIle, outputcsv, jsonDat
             shutil.copy2(source, destination)
             print("Copied", source, "to", destination)
         #---- Calls the data analysis method and file to handle data analysis ----
-        #removeOutliers(os.path.join(ArchivedFolder, CombinedOutputCSVFIle), os.path.join(ArchivedFolder, outputcsv), jsonData)
+        removeOutliers(os.path.join(ArchivedFolder, CombinedOutputCSVFIle), os.path.join(ArchivedFolder, outputcsv), jsonData)
         #regression(os.path.join(ArchivedFolder, outputcsv), jsonData, githubTest)
 
 if __name__ == "__main__":

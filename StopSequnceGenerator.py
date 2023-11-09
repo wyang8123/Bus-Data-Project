@@ -63,7 +63,10 @@ def stopSequence(INPUT_FILE, OUTPUT_FILE, jsonData):
         #---- Finds the distance using geopy and lat and lon and appends it into a a temp list ----
         for y in range(subset.shape[0]):
             LocatedRow = subset.iloc[y]
-            KM_Distance = distance.distance((LocatedRow[Stop_lat_Column], LocatedRow[Stop_lon_Column]), (LocatedRow[lat_Column], LocatedRow[lon_Column])).km * 1000
+            try: 
+                KM_Distance = distance.distance((LocatedRow[Stop_lat_Column], LocatedRow[Stop_lon_Column]), (LocatedRow[lat_Column], LocatedRow[lon_Column])).km * 1000
+            except Exception as e:
+                KM_Distance = None
             Distance_KM_List_Routes.append(float(KM_Distance))
         #---- Finds the minimum and if its less then the arrive threshold then arrived bus ----
         #---- Calcualtes the arrival and depature time ----
@@ -108,7 +111,7 @@ def stopSequence(INPUT_FILE, OUTPUT_FILE, jsonData):
             FinalStops.append(Final_Stop_Groups)
     #---- Creates a dataframe with the following columns and creates a CSV file----
     Output_DataFrame = pandas.DataFrame(FinalStops, columns=["group_id", "arrive_time", "depart_time", "Fleet_Number", "Timepoint"])
-    Output_DataFrame.drop_duplicates()
+    Output_DataFrame.drop_duplicates().dropna(how="any")
     Output_DataFrame.to_csv(OUTPUT_FILE, index=False)
     print("----- OUTPUT Data Frame -----")
     print("Filename: \n%s"%(OUTPUT_FILE))

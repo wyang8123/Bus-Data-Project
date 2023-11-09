@@ -23,6 +23,7 @@ def cleandata(INPUT_FILE, OUTPUT_FILE, jsonData):
     first_column = csvFile.iloc[:, 0]
     #---- Finds the length of how many logged table columns and skips the date/time column, which is the first  ----
     csvFile = csvFile.iloc[:, 1:len(jsonData.get("LoggedTableColumns"))]
+    print(csvFile)
     #---- Splits the frst column that has combined date/time to two different columns with Date and time ----
     firstcolumnResult = first_column.str.split(" ", expand=True)
     firstcolumnResult.columns = ["date", "time"]
