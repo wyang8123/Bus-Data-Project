@@ -45,6 +45,10 @@ def runtimefeatures(INPUT_FILE, OUTPUT_FILE, jsonData, githubtest=False):
         for x in range(len(timeDataFrame)-1):
             subset_value = arrivaldataFrame1[(arrivaldataFrame1 >= timeDataFrame.iloc[x]) & (arrivaldataFrame1 <= timeDataFrame.iloc[x+1])]
             finalDataFrame.loc[subset_value.index.tolist(), "Sequence"] = str(datetime.strftime(timeDataFrame.iloc[x], "%H:%M:%S")) + " - " + str(datetime.strftime(timeDataFrame.iloc[x+1], "%H:%M:%S"))
+        subset_value = arrivaldataFrame1[(arrivaldataFrame1 >= timeDataFrame.iloc[-1])]
+        finalDataFrame.loc[subset_value.index.tolist(), "Sequence"] = str(datetime.strftime(timeDataFrame.iloc[-1], "%H:%M:%S"))
+        subset_value = arrivaldataFrame1[(arrivaldataFrame1 <= timeDataFrame.iloc[0])]
+        finalDataFrame.loc[subset_value.index.tolist(), "Sequence"] = str(datetime.strftime(timeDataFrame.iloc[0], "%H:%M:%S"))
     finalDataFrame.to_csv(OUTPUT_FILE, index=False, header=True)
     print("---- Added useful Features ----")
     print("Created Filename with more useful features: \n", OUTPUT_FILE)
