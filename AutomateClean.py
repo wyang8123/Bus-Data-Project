@@ -72,6 +72,7 @@ def main(Folderbustop, ArchivedFolder, CombinedOutputCSVFIle, outputcsv, jsonDat
             print("Copied", source, "to", destination)
         #---- Calls the data analysis method and file to handle data analysis ----
         removeOutliers(os.path.join(ArchivedFolder, CombinedOutputCSVFIle), os.path.join(ArchivedFolder, outputcsv), jsonData)
+        runtimefeatures(os.path.join(ArchivedFolder, outputcsv), os.path.join(ArchivedFolder, outputcsv), jsonData)
         #regression(os.path.join(ArchivedFolder, outputcsv), jsonData, githubTest)
 
 if __name__ == "__main__":
