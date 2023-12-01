@@ -1,11 +1,11 @@
 import pandas, sys
 from datetime import datetime
-from RemoveoutlierTrips import *
+#from .RemoveoutlierTrips import *
 import numpy, openpyxl, json, os, multiprocessing
 
 def getJsonInformation():
     #---- Grbas all information from the information.json file ----
-    with open("../Config.json") as configInformation:
+    with open("Config.json") as configInformation:
         configData = json.load(configInformation)
     return configData
 

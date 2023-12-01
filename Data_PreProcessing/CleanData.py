@@ -4,16 +4,21 @@ import sys, json
 
 def getJsonInformation():
     #---- Grbas all information from the information.json file ----
-    with open("Config.json") as configInformation:
+    with open("../Config.json") as configInformation:
         configData = json.load(configInformation)
     return configData
 
 def cleandata(INPUT_FILE, OUTPUT_FILE, jsonData):
     #---- Reads all the INPUT_FILE CSV file and drop any missing values and resets the index (Ensure index is in chronlogical order) ----
-    csvFile = pandas.read_csv(INPUT_FILE, on_bad_lines='skip').dropna(how="any").reset_index(drop=True).drop_duplicates()
+    csvFile = pandas.read_csv(INPUT_FILE, on_bad_lines='skip',).reset_index(drop=True).drop_duplicates()
+    if "sleep_pin_state" in csvFile.columns:
+        csvFile = csvFile.drop(columns=["sleep_pin_state", "fleet_id"])
+    csvFile = csvFile.dropna(how="any")
+    #csvFile = pandas.read_csv(INPUT_FILE)
     print("----- Cleaning the CSV Data (Removing 0 and empty Columns) -----")
     print("File Being Cleaned: \n", INPUT_FILE)
     print("Initial Data Frame: \n", csvFile)
+
     #csvFile = csvFile.drop(csvFile.columns[jsonData.get("Drop Columns")], axis=1)
     #csvFile = csvFile.drop(csvFile.columns[-1], axis=1)
     #---- Replaces all 0 or missing data cells with NaN(none) and then drop all None values in the dataset ----
